@@ -8,7 +8,9 @@ public class RunBloodData{
 		System.out.print("Enter patient's Rhesus Factor: ");
 		String rees = sc.nextLine();
 		if (rees.equals("+")||rees.equals("-")){
-			BloodData obj1 = new BloodData(bled, rees);
+			BloodData obj1 = new BloodData();
+			obj1.setBloodType(bled);
+			obj1.setRhFactor(rees);
 			obj1.display();
 			System.out.println(" is added to the blood bank.");
 		}
@@ -26,7 +28,7 @@ public class RunBloodData{
 			System.out.println(" is added to the blood bank.");
 		}
 		else{
-			System.out.println("Invalid Rhesus Factor.");
+			System.out.println("Invalid Response.");
 		}
 		}
 	else{
